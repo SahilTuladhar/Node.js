@@ -17,3 +17,6 @@ writeFileSync(
   `Here is the resut: ${first} , ${second}`,
   { flag: "a" } // setting writefilesync to append mode
 );
+
+console.log("only executes after the reading and writing");
+

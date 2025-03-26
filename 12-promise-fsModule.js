@@ -20,15 +20,28 @@
 const { writeFile , readFile} = require('node:fs/promises')
 
 async function fileHandling(path1 , path2){
+
+    console.log("File Operation Started");
+        
   
     try{
+
+      
         const file1 = await readFile(path1,'utf8')
         const file2 = await readFile(path2 , 'utf8')
 
         writeFile('./content/results-promise' , `Result: ${file1} , ${file2}`)
+
+        console.log("File operation complete");
+        
     }catch(err){
         throw err
     }
 }
 
 fileHandling('./content/first.txt' , './content/second.txt')
+
+console.log("exectues while the file reads");
+
+
+

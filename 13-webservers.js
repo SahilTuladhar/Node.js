@@ -20,4 +20,7 @@ const server = http.createServer((req, res) => {
   res.end();
 });
 
-server.listen(5000);
+server.listen(5000 , () => {
+  console.log("Listening to port 5000.....");
+  
+});
